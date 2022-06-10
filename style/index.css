@@ -1,0 +1,192 @@
+:root {
+  --yellow: #ff9f1c;
+  --white: #fdfffc;
+  --black: #141115;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: var(--black);
+  scroll-behavior: smooth;
+}
+
+html {
+  @media (max-width: 1080px) {
+    font-size: 93.75%;
+  }
+  @media (max-width: 720px) {
+    font-size: 87.5%;
+  }
+}
+
+body {
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+button {
+  cursor: pointer;
+}
+
+[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+::selection {
+  user-select: none;
+}
+
+img {
+  display: block;
+}
+
+@media (max-width: 426px) {
+  header,
+  section {
+    max-width: 80%;
+  }
+}
+
+.grid {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header */
+
+a img {
+  width: 150px;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu a {
+  font-weight: 500;
+  position: relative;
+}
+
+.menu a::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--yellow);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 500ms;
+}
+
+.menu a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.button {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: var(--yellow);
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #e68f19;
+}
+
+.button:active {
+  background-color: #e68f19;
+}
+
+/* Hero */
+
+main {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+
+.hero {
+  width: 100vw;
+  margin-top: 120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero h1 {
+  font-size: 40px;
+  line-height: 1.25;
+  font-family: "Merriweather", serif;
+}
+
+.hero p,
+.hero button {
+  margin-top: 1.25rem;
+}
+
+.hero p {
+  width: 600px;
+}
+
+.hero--right img {
+  width: 400px;
+}
