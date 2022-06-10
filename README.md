@@ -2,7 +2,7 @@
 
 ---
 
-**Integrantes do grupo:** [Jeferson Lopes](https://github.com/thelopesbr), [Samuel Gomes](https://github.com/Saesel) e Nicollas Mirapalheta. <br>
+**Integrantes do grupo:** [Jeferson Lopes](https://github.com/thelopesbr), [Samuel Gomes](https://github.com/Saesel), Nicollas Mirapalheta e [Gregory Pitthan](https://github.com/Gregory-JP). <br>
 **Disciplina:** Sistemas para Internet 2
 
 O projeto consiste em um sistema de bate ponto online. Como o trabalho foi dividido em partes, temos apenas uma parte do front-end do sistema, ao longo da disciplina desenvolveremos o sistema completo e funcional.
