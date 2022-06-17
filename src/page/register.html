@@ -4,26 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/login.css"/>
-    <script src="../js/login.js" defer></script>
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <script src="../js/register.js" defer></script>
     <title>Ponto Certo - Login</title>
-  </head>
+</head>
   
 <body>
 
   <div class="container-logo">
-    <h1 class="logo"><a href="index.html">Ponto Certo <span>Login</span></a></h1>
+    <h1 class="logo"><a href="index.html">Ponto Certo <span>Cadastro</span></a></h1>
   </div>
 
   <div class="container">
     
     <form class="container-login">
       <div class="container-login-title">
-        <h2 class="title">Fazer login</h2>
+        <h2 class="title">Cadastro</h2>
       </div>
 
       <div class="container-login-email">
-        <label for="email">E-mail</label>
+        <label for="user">Email</label>
         <input type="text" name="email" id="email" required/>
       </div>
 
@@ -33,20 +34,18 @@
       </div>
 
       <div class="container-login-button">
-        <input type="submit" value="Login" class="button" onclick="login()">
+        <input type="submit" value="Cadastrar" class="button" onclick="register()">
       </div>
-
-      <div class="container-login-forgot">
-              <h3 class="forgot-password"><a href="#">Esqueceu sua senha?</a></h3>
-              <h3 class="forgot-password"> <a href="register.html">Ainda não é usuário?</a></h3>
       </div>
     </form>
 
     <div class="container-back">
       <h3 class="forgot-password">
-        <a href="index.html">Voltar</a>
+        <a href="login.html">Voltar</a>
       </h3>
     </div>
+    
+
   </div>
 
 </body>
