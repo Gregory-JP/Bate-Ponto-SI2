@@ -49,7 +49,11 @@ function reset(){
 
 function register() {
     
-    //let email = document.getElementById('email').value;
+    event.preventDefault();
+
+    let email = document.getElementById('email').value;
+    let date = document.getElementById('date').value;
+    
     let id = Math.round(Math.random() * (9999 - 1000) + 1000);
 
     _second = secondVal < 10 ? "0" + secondVal.toString() : secondVal.toString();
@@ -58,14 +62,22 @@ function register() {
 
     const Register = {
         id: id,
-        user: 'email',
-        date: '',
+        user: email,
+        date: date,
         time: _hour+':'+_minute+':'+_second
     }
 
-    localStorage.setItem(id.toString(), JSON.stringify(Register));
-    window.location.assign("/src/page/main.html");
-    reset();
+    if(!sessionStorage.getItem(email)){
+        alert('User not found')
+    }
+    else if(email && date && sessionStorage.getItem(email)){
+        localStorage.setItem(id.toString(), JSON.stringify(Register));
+        window.location.assign("/src/page/main.html");
+        reset();
+    }
+    else{
+        alert('Inform all data')
+    }
 }
 
 

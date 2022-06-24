@@ -49,10 +49,24 @@
         <span>:</span>
         <span id="hour">00</span>
       </div>
-
+      
       <button id="start" onclick="start();">Iniciar</button>
       <button id="pause" onclick="stop();">Pausar</button>
-      <button id="reset" onclick="register();">Registrar</button>
+      <form>
+        <div class="container-login-email">
+          <label for="email">E-mail</label>
+          <input type="text" name="email" id="email" required/>
+        </div>
+
+        <div class="container-login-password">
+          <label for="password">Data</label>
+          <input type="date" name="date" id="date" required/>
+        <div class="container-login-button">
+            <input type="submit" value="Registrar" class="button" onclick="register()">
+        </div>
+      </form>
+      </div>
+
     </div>
   </body>
 </html>
