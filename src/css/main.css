@@ -1,216 +1,222 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-    background-image: linear-gradient(to right, rgba(47, 194, 67, 0.75), rgba(161, 201, 16, 0.836)),
-    url(https://i.ytimg.com/vi/bnRd8k8aJ2U/maxresdefault.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    color: white;
+  background-image: linear-gradient(to bottom, #fdfffc);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fdfffc;
+  margin-top: -30px;
 }
 
-.container-logo {
-    margin: 0 10px 10px 10px;
+.container-logo img {
+  margin-top: -30px;
+  margin-left: -45px;
+  width: 200px;
 }
-  
+
 .logo a {
-    color: #222222;
-    transition: 400ms all;
-    text-decoration: none;
-}
-
-.logo a:hover {
-    color: #ff9f1c;
-    text-decoration: none;
+  color: #ff9f1c;
+  transition: 400ms all;
+  text-decoration: none;
 }
 
 nav {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    padding: 35px 5%;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 5%;
 }
 
 nav .logo {
-    font-size: 30px;
-    font-weight: 700;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 nav ul li {
-    padding: 8px 15px;
-    border-radius: 10px;
-    transition: 0.2 ease-in;
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: 0.2 ease-in;
 }
 
 nav ul li a {
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
-    text-decoration: none;
+  color: #ff9f1c;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
 }
 
-nav .buttons button{
-    padding: 2px 20px;
-    border-radius: 10px;
-    color: rgb(255, 8, 0);
-    font-size: 16px;
-    border-style: none;
-    font-weight: 700;
-    margin-left: 10px;
+nav .buttons button {
+  padding: 2px 20px;
+  border-radius: 10px;
+  color: rgb(255, 8, 0);
+  font-size: 16px;
+  border-style: none;
+  font-weight: 700;
+  margin-left: 10px;
 }
 
 nav ul li:hover {
-    background-color: rgb(50, 50, 50);
-    transition: 0.8s;
+  background-color: #e02006;
+  transition: 0.8s;
 }
 
 nav .menubtn {
-    font-size: 30px;
-    font-weight: bolder;
-    cursor: pointer;
-    display: none;
+  font-size: 30px;
+  font-weight: bolder;
+  cursor: pointer;
+  display: none;
 }
 
 /* menu responsivo*/
 @media screen and (max-width: 600px) {
-    nav .menubtn {
-        display: flex;
-    }
-    nav .buttons {
-        display: none;
-    }
-    .sideMenu {
-        display: block !important;
-    }
+  nav .menubtn {
+    display: flex;
+  }
+  nav .buttons {
+    display: none;
+  }
+  .sideMenu {
+    display: block !important;
+  }
 }
 
 .sideMenu {
-    height: 100%;
-    position: fixed;
-    top: 0;
-    right: 0%;
-    background-color: rgb(50, 50, 50);
-    overflow-x: hidden;
-    transition: 0.3s ease-in;
-    padding-top: 60px;
-    display: none;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0%;
+  background-color: rgb(50, 50, 50);
+  overflow-x: hidden;
+  transition: 0.3s ease-in;
+  padding-top: 60px;
+  display: none;
 }
 
 .sideMenu a {
-    padding: 8px 8px 8px 40px;
-    display: block;
-    font-size: 25px;
-    color: #a1a1a1;
-    transition: 0.3s;
+  padding: 8px 8px 8px 40px;
+  display: block;
+  font-size: 25px;
+  color: #a1a1a1;
+  transition: 0.3s;
 }
 
 .sideMenu a button {
-    padding: 10px 20px;
-    border-radius: 10px;
-    color: rgb(255, 8, 0);
-    font-size: 16px;
-    border-style: none;
-    font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: rgb(255, 8, 0);
+  font-size: 16px;
+  border-style: none;
+  font-weight: 700;
 }
 
 .sideMenu a:hover {
-    color: white;
+  color: white;
 }
 
 .sideMenu .closeBtn {
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 20px;
-    margin-left: 50px;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 20px;
+  margin-left: 50px;
 }
 
 /* responsividade do header*/
 @media screen and (max-width: 980px) {
-    .coluna1 h1 {
-        font-size: 40px;
-    }
-    .coluna1 p {
-        font-size: 18px;
-    }
-    .row {
-        margin-top: 80px;
-    }
+  .coluna1 h1 {
+    font-size: 40px;
+  }
+  .coluna1 p {
+    font-size: 18px;
+  }
+  .row {
+    margin-top: 80px;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .coluna1 h1 {
-        font-size: 35px;
-    }
-    .row {
-        flex-direction: column;
-    }
-    .row .coluna1 {
-        padding: 30px;
-    }
+  .coluna1 h1 {
+    font-size: 35px;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .row .coluna1 {
+    padding: 30px;
+  }
 }
 
 #cronometro {
-    width: 314px;
-    height: 86px;
-    margin: 100px auto;
-    background: #fbefef;
-    color: #2c2a2a;
-    border-radius: 10px;
-    padding: 60px 50px 100px;
-    text-align: center;
-    font-size: 28px;
+  width: 23%;
+  height: 300px;
+  margin: 100px auto;
+  background: #ff9f1c;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 40px;
 }
-  
+
 #cronometro span {
-    background: #02e63b;
-    color: #ffeffb;
-    padding: 10px;
-    width: 60px;
-    border-radius: 3px;
-    margin: 5px;
-    display: inline-block;
+  background: none;
+  color: black;
+  padding: 10px 10px 10px;
+  width: 60px;
+  border-radius: 3px;
+  margin-bottom: 0px;
+  display: inline-block;
 }
 
 .time {
-    margin-left: -25px;
+  margin-left: 90px;
 }
 
 #cronometro span {
-    margin-left: 20px;
+  margin-left: -100px;
+  margin-top: 115px;
 }
 
 #cronometro button:first-of-type {
-    margin-top: 15px;
+  margin-top: 150px;
 }
 
 #cronometro button {
-    font-size: 22px;
-    border: none;
-    background-color: #dae90e;
-    color: white;
-    border-radius: 5px;
-    width: 140px;
-    height: 50px;
-    transition: .3s;
+  font-size: 22px;
+  border: none;
+  background-color: #ff9f1c;
+  color: white;
+  border-radius: 5px;
+  width: 140px;
+  height: 50px;
+  transition: 0.3s;
+  margin-top: 10px;
 }
 
 #cronometro button:last-child {
-    background-color: #e02006;
+  background-color: #e02006;
 }
 
 #cronometro button:hover {
-    background: #c54104;
-    color: #f1ecec;
-    cursor: pointer;
+  background: #c54104;
+  color: #f1ecec;
+  cursor: pointer;
+}
+.imagem--fundo img {
+  width: 30%;
+  margin-bottom: -650px;
+}
+.imagem--fundo1 img {
+  width: 35%;
+  margin-left: 65%;
+  margin-bottom: -632px;
 }

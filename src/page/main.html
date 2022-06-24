@@ -1,49 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css" />
     <script src="../js/stopwatch.js" defer></script>
     <script src="../js/menu.js" defer></script>
     <title>Ponto Certo</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="imagem--fundo">
+      <img src="../img/hero.svg" alt="" />
+    </div>
+    <div class="imagem--fundo1">
+      <img src="../img/hero2.svg" alt="" />
+    </div>
     <nav>
-        <div class="container-logo">
-            <h1 class="logo"><a href="index.html">Bate Ponto<span>... <br>E pronto!</span></a></h1>
-        </div>
-        
-        <span class="menubtn" onclick="openMenu()">&#9776;</span>
+      <div class="container-logo">
+        <h1 class="logo">
+          <a href="index.html"
+            ><img src="../img/logo.png" alt="Logomarca do Ponto Certo"
+          /></a>
+        </h1>
+      </div>
 
-        <div class="buttons">
-            <ul>
-                <li> <a href="#">Home</a> </li>
-                <li> <a href="#">About</a> </li>
-            </ul>
-        </div>
+      <span class="menubtn" onclick="openMenu()">&#9776;</span>
+
+      <div class="buttons">
+        <ul>
+          <li><a href="#">Logout</a></li>
+          <li><a href="#">Perfil?</a></li>
+        </ul>
+      </div>
     </nav>
 
     <div class="sideMenu" id="sidenav">
-        <a href="#" class="closeBtn" onclick="closeMenu()">&#10006;</a>
-        <a href="#">Home</a>
-        <a href="#">About</a>
+      <a href="#" class="closeBtn" onclick="closeMenu()">&#10006;</a>
+      <a href="#">Home</a>
+      <a href="#">About</a>
     </div>
 
-
-<div id="cronometro">
-
-    <div class="time">
-        <span id="hour">00</span>
-        <span id="minute">00</span>
+    <div id="cronometro">
+      <div class="time">
         <span id="second">00</span>
-    </div>
+        <span>:</span>
+        <span id="minute">00</span>
+        <span>:</span>
+        <span id="hour">00</span>
+      </div>
 
       <button id="start" onclick="start();">Iniciar</button>
       <button id="pause" onclick="stop();">Pausar</button>
-      <button id="reset" onclick="reset();">Resetar</button>
-</div>
-
-</body>
+      <button id="reset" onclick="register();">Registrar</button>
+    </div>
+  </body>
 </html>
