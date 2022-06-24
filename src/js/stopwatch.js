@@ -29,7 +29,7 @@ function start() {
     minute.innerHTML = minuteVal < 10 ? "0" + minuteVal.toString() : minuteVal;
     hour.innerHTML = hourVal < 10 ? "0" + hourVal.toString() : hourVal;
 
-},0.5)}
+},1000)}
 
 function stop() {
   clearInterval(timerInterval);
