@@ -2,6 +2,9 @@
   --yellow: #ff9f1c;
   --white: #fdfffc;
   --black: #141115;
+  --text: #828282;
+  --secondary-backgrounds: #f3f3f3;
+  --input-hover: #e8e7e8;
 }
 
 * {
@@ -44,12 +47,15 @@ h4,
 h5,
 h6,
 strong {
+  font-family: "Merriweather", serif;
   font-weight: 600;
 }
 
 h2 {
+  margin-bottom: 1rem;
   font-size: 2rem;
   font-weight: bold;
+  text-align: center;
 }
 
 button {
@@ -59,10 +65,6 @@ button {
 [disabled] {
   opacity: 0.6;
   cursor: not-allowed;
-}
-
-::selection {
-  user-select: none;
 }
 
 img {
@@ -82,6 +84,10 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+p {
+  color: var(--text);
 }
 
 /* Header */
@@ -160,13 +166,18 @@ a img {
 /* Hero */
 
 main {
-  width: 100vw;
+  margin: 0 auto;
   display: flex;
   align-items: center;
+  flex-direction: column;
+}
+
+section {
+  margin: 3rem 0;
 }
 
 .hero {
-  width: 100vw;
+  width: 100%;
   margin-top: 120px;
   display: flex;
   justify-content: space-between;
@@ -175,7 +186,6 @@ main {
 .hero h1 {
   font-size: 40px;
   line-height: 1.25;
-  font-family: "Merriweather", serif;
 }
 
 .hero p,
@@ -189,4 +199,123 @@ main {
 
 .hero--right img {
   width: 400px;
+}
+
+/* Sobre */
+
+.about .paragraph {
+  max-width: 80%;
+  margin: 0 auto 1rem auto;
+  text-align: center;
+}
+
+.card--container {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card {
+  width: 350px;
+  height: 240px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  border-radius: 0.25rem;
+  border: 1px solid #cdcfcc;
+  border-bottom: 5px solid var(--yellow);
+  background-color: var(--secondary-backgrounds);
+  opacity: 0.7;
+  transition: 400ms;
+}
+
+.card p {
+  font-size: 0.9rem;
+  text-align: left;
+  color: var(--text);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--black);
+}
+
+.card img {
+  width: 32px;
+  filter: invert(80%) sepia(23%) saturate(7454%) hue-rotate(344deg)
+    brightness(102%) contrast(101%);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  opacity: 1;
+}
+
+/* Contato */
+
+.contact--form {
+  max-width: 50%;
+  margin: 2rem auto;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #cdcfcc;
+  border-radius: 0.25rem;
+  background: var(--secondary-backgrounds);
+}
+
+.contact--form label {
+  margin-bottom: 0.35rem;
+}
+
+.contact--form input,
+.contact--form textarea {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 0.5rem;
+  border-radius: 0.25rem;
+  outline: none;
+  border: none;
+  background-color: var(--white);
+  color: var(--black);
+  transition: 400ms;
+  user-select: auto;
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  background-color: var(--input-hover);
+}
+
+input[value] {
+  cursor: pointer;
+  background-color: var(--yellow);
+  color: var(--white);
+}
+
+input[value]:hover {
+  background-color: #e68f19;
+}
+
+input:last-child {
+  margin-bottom: 0;
+}
+
+/* Footer */
+
+footer {
+  padding: 1rem 0;
+  text-align: center;
+  background: var(--secondary-backgrounds);
 }

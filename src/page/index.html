@@ -28,9 +28,8 @@
         <nav>
           <ul class="menu">
             <li><a href="#">Início</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Planos</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#contact">Contato</a></li>
           </ul>
         </nav>
         <a href="login.html"><button class="button">Login</button></a>
@@ -55,6 +54,74 @@
           <img src="../img/hero.svg" alt="" />
         </div>
       </section>
+      <section class="about" id="about">
+        <h2>Sobre nós</h2>
+        <p class="paragraph">
+          A Ponto Certo é formada por um time de alta performance com a missão
+          de ajudar a sua empresa. Diariamente trabalhamos nessa missão com base
+          nos nosso valores e cultura, que são traduzidos em toda e qualquer
+          ação tomada pelos times.
+        </p>
+        <p class="paragraph">
+          Ao otimizar as rotinas de sua empresa, é possível focar no
+          desenvolvimento pessoal e profissional dos colaboradores. Com isso,
+          nosso propósito é impactar as organizações e transformar a história de
+          milhares de pessoas e empresas.
+        </p>
+        <ul class="card--container">
+          <li class="card">
+            <img src="../img/clock.svg" alt="Ícone de Relógio" />
+            <h3>Produtividade</h3>
+            <p>
+              Reduzimos os processos manuais que custam tempo e dinheiro durante
+              o tratamento e fechamento do ponto.
+            </p>
+          </li>
+          <li class="card">
+            <img src="../img/map.svg" alt="Ícone de Mapa" />
+            <h3>Praticidade</h3>
+            <p>
+              Acesse de onde estiver, pelo celular, tablet ou pela web para
+              bater ou controlar os pontos.
+            </p>
+          </li>
+          <li class="card">
+            <img src="../img/smartphone.svg" alt="Ícone de Celular" />
+            <h3>Controle</h3>
+            <p>
+              Os colaboradores marcam ponto no aplicativo ou na web, você
+              acompanha em tempo real as ocorrências do ponto.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="contact" id="contact">
+        <h2>Entre em contato</h2>
+        <p>
+          Nossa equipe irá demonstrar como a plataforma Ponto Certo pode
+          acrescentar ao cotidiano de sua empresa.
+        </p>
+        <form class="contact--form">
+          <label for="name">Nome completo</label>
+          <input type="text" id="name" />
+          <label for="email">E-mail</label>
+          <input type="email" id="email" />
+          <label for="phone">Telefone</label>
+          <input type="tel" id="phone" />
+          <label for="message">Mensagem</label>
+          <textarea
+            name="message"
+            id=""
+            cols="30"
+            rows="10"
+            id="message"
+          ></textarea>
+          <input type="button" value="Enviar" />
+        </form>
+      </section>
     </main>
+    <footer>
+      <p>Desenvolvido com ❤️ por <strong>Melhorzinhos de SI</strong>.</p>
+    </footer>
   </body>
 </html>
