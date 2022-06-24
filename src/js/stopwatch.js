@@ -48,32 +48,38 @@ function reset() {
 }
 
 function register() {
-  event.preventDefault();
+  try{
+    event.preventDefault();
 
-  let email = document.getElementById("email").value;
-  let date = document.getElementById("date").value;
+      let email = document.getElementById("email").value;
+      let date = document.getElementById("date").value;
 
-  let id = Math.round(Math.random() * (9999 - 1000) + 1000);
+      let id = Math.round(Math.random() * (9999 - 1000) + 1000);
 
-  _second = secondVal < 10 ? "0" + secondVal.toString() : secondVal.toString();
-  _minute = minuteVal < 10 ? "0" + minuteVal.toString() : minuteVal.toString();
-  _hour = hourVal < 10 ? "0" + hourVal.toString() : hourVal.toString();
+      _second = secondVal < 10 ? "0" + secondVal.toString() : secondVal.toString();
+      _minute = minuteVal < 10 ? "0" + minuteVal.toString() : minuteVal.toString();
+      _hour = hourVal < 10 ? "0" + hourVal.toString() : hourVal.toString();
 
-  const Register = {
-    id: id,
-    user: email,
-    date: date,
-    time: _hour + ":" + _minute + ":" + _second,
-  };
+      const Register = {
+        id: id,
+        user: email,
+        date: date,
+        time: _hour + ":" + _minute + ":" + _second,
+      };
 
-  if (!sessionStorage.getItem(email)) {
-    alert("User not found");
-  } else if (email && date && sessionStorage.getItem(email)) {
-    localStorage.setItem(id.toString(), JSON.stringify(Register));
-    alert("Ponto registrado com sucesso.");
-    window.location.assign("/src/page/main.html");
-    reset();
-  } else {
-    alert("Inform all data");
+      if (!sessionStorage.getItem(email)) {
+        alert("User not found");
+      } else if (email && date && sessionStorage.getItem(email)) {
+        localStorage.setItem(id.toString(), JSON.stringify(Register));
+        alert("Point registered successfully.");
+        window.location.assign("/src/page/main.html");
+        reset();
+      } else {
+        alert("Inform all data");
+      }
   }
+  catch{
+    alert('Start the stopwatch')
+  }
+  
 }
