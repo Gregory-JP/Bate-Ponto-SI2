@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/main.css" />
     <script src="../js/stopwatch.js" defer></script>
     <script src="../js/menu.js" defer></script>
+    <script src="../js/permisson.js" defer></script>
     <title>Ponto Certo</title>
   </head>
   <body>
@@ -15,6 +16,9 @@
     </div>
     <div class="imagem--fundo1">
       <img src="../img/hero2.svg" alt="" />
+    </div>
+    <div class="notification">
+      <p>Ponto registrado com sucesso.</p>
     </div>
     <nav>
       <div class="container-logo">
@@ -29,8 +33,8 @@
 
       <div class="buttons">
         <ul>
-          <li><a href="#">Logout</a></li>
-          <li><a href="#">Perfil?</a></li>
+          <li><a href="login.html">Logout</a></li>
+          <li><a href="delete.html">Deletar Perfil</a></li>
         </ul>
       </div>
     </nav>
@@ -49,24 +53,26 @@
         <span>:</span>
         <span id="hour">00</span>
       </div>
-      
+
       <button id="start" onclick="start();">Iniciar</button>
       <button id="pause" onclick="stop();">Pausar</button>
-      <form>
-        <div class="container-login-email">
-          <label for="email">E-mail</label>
-          <input type="text" name="email" id="email" required/>
-        </div>
+      <form class="form--login">
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="E-mail"
+          required
+        />
 
-        <div class="container-login-password">
-          <label for="password">Data</label>
-          <input type="date" name="date" id="date" required/>
-        <div class="container-login-button">
-            <input type="submit" value="Registrar" class="button" onclick="register()">
-        </div>
+        <input type="date" name="date" id="date" required />
+        <input
+          type="submit"
+          value="Registrar"
+          class="button"
+          onclick="register()"
+        />
       </form>
-      </div>
-
     </div>
   </body>
 </html>

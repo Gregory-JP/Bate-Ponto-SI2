@@ -1,48 +1,43 @@
 function registerUser() {
-    
-    event.preventDefault();
+  event.preventDefault();
 
-    let email = document.getElementById('email').value;
-    let password = document.getElementById('password').value;
-    
-    password = window.btoa(password)
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
 
-    var user = {
-        email: email,
-        password: password,
-    }
+  password = window.btoa(password);
 
-    localStorage.setItem(email,JSON.stringify(user));
+  var user = {
+    email: email,
+    password: password,
+  };
 
-    window.location.assign("/src/page/login.html");
+  localStorage.setItem(email, JSON.stringify(user));
+
+  window.location.assign("/src/page/login.html");
 }
 function deleteUser() {
-    
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
 
-    let user = localStorage.getItem(email);
-   
-    if(user){
-        user = JSON.parse(user);
-        user.password =  window.atob(user.password)
-        if(email == user.email && password == user.password){
-            localStorage.removeItem(email);
-            alert('User successfully deleted')
-            window.location.assign("/src/page/login.html");
-        }
-        else{
-            alert('Incorrect email or password')
-        }
+  let user = localStorage.getItem(email);
+
+  if (user) {
+    user = JSON.parse(user);
+    user.password = window.atob(user.password);
+    if (email == user.email && password == user.password) {
+      localStorage.removeItem(email);
+      alert("User successfully deleted");
+      window.location.assign("/src/page/login.html");
+    } else {
+      alert("Incorrect email or password");
     }
-    else{
-        alert('User not found')
-        window.location.assign("/src/page/delete.html")
-    }
-    
+  } else {
+    alert("User not found");
+    window.location.assign("/src/page/delete.html");
+  }
 }
 function deleteAll() {
-    localStorage.clear()
-    sessionStorage.clear()
-    window.location.assign("/src/page/login.html");
+  localStorage.clear();
+  sessionStorage.clear();
+  window.location.assign("/src/page/login.html");
 }

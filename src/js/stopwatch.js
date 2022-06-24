@@ -1,83 +1,79 @@
 let timerInterval;
-let second = document.getElementById('second');
-let minute = document.getElementById('minute');
-let hour = document.getElementById('hour');
+let second = document.getElementById("second");
+let minute = document.getElementById("minute");
+let hour = document.getElementById("hour");
 
-let minuteVal,hourVal,secondVal = 0
+let minuteVal,
+  hourVal,
+  secondVal = 0;
 
 function start() {
+  stop();
 
-    stop();
-
-    timerInterval = setInterval(function() {
+  timerInterval = setInterval(function () {
     secondVal += 1;
 
-    minuteVal = minuteVal ? minuteVal : 0
-    hourVal = hourVal ? hourVal : 0
+    minuteVal = minuteVal ? minuteVal : 0;
+    hourVal = hourVal ? hourVal : 0;
 
-    
-    if(secondVal == 60){
-        minuteVal += 1
-        secondVal = 0
+    if (secondVal == 60) {
+      minuteVal += 1;
+      secondVal = 0;
     }
-    if(minuteVal == 60){
-        hourVal += 1
-        minuteVal = 0
+    if (minuteVal == 60) {
+      hourVal += 1;
+      minuteVal = 0;
     }
 
     second.innerHTML = secondVal < 10 ? "0" + secondVal.toString() : secondVal;
     minute.innerHTML = minuteVal < 10 ? "0" + minuteVal.toString() : minuteVal;
     hour.innerHTML = hourVal < 10 ? "0" + hourVal.toString() : hourVal;
-
-},1000)}
+  }, 1000);
+}
 
 function stop() {
   clearInterval(timerInterval);
 }
 
-function reset(){
-    stop();
+function reset() {
+  stop();
 
-    minuteVal= 0
-    hourVal= 0
-    secondVal = 0
+  minuteVal = 0;
+  hourVal = 0;
+  secondVal = 0;
 
-    second.innerHTML = '00';
-    minute.innerHTML = '00';
-    hour.innerHTML = '00';
+  second.innerHTML = "00";
+  minute.innerHTML = "00";
+  hour.innerHTML = "00";
 }
 
 function register() {
-    
-    event.preventDefault();
+  event.preventDefault();
 
-    let email = document.getElementById('email').value;
-    let date = document.getElementById('date').value;
-    
-    let id = Math.round(Math.random() * (9999 - 1000) + 1000);
+  let email = document.getElementById("email").value;
+  let date = document.getElementById("date").value;
 
-    _second = secondVal < 10 ? "0" + secondVal.toString() : secondVal.toString();
-    _minute= minuteVal < 10 ? "0" + minuteVal.toString() : minuteVal.toString();
-    _hour = hourVal < 10 ? "0" + hourVal.toString() : hourVal.toString();
+  let id = Math.round(Math.random() * (9999 - 1000) + 1000);
 
-    const Register = {
-        id: id,
-        user: email,
-        date: date,
-        time: _hour+':'+_minute+':'+_second
-    }
+  _second = secondVal < 10 ? "0" + secondVal.toString() : secondVal.toString();
+  _minute = minuteVal < 10 ? "0" + minuteVal.toString() : minuteVal.toString();
+  _hour = hourVal < 10 ? "0" + hourVal.toString() : hourVal.toString();
 
-    if(!sessionStorage.getItem(email)){
-        alert('User not found')
-    }
-    else if(email && date && sessionStorage.getItem(email)){
-        localStorage.setItem(id.toString(), JSON.stringify(Register));
-        window.location.assign("/src/page/main.html");
-        reset();
-    }
-    else{
-        alert('Inform all data')
-    }
+  const Register = {
+    id: id,
+    user: email,
+    date: date,
+    time: _hour + ":" + _minute + ":" + _second,
+  };
+
+  if (!sessionStorage.getItem(email)) {
+    alert("User not found");
+  } else if (email && date && sessionStorage.getItem(email)) {
+    localStorage.setItem(id.toString(), JSON.stringify(Register));
+    alert("Ponto registrado com sucesso.");
+    window.location.assign("/src/page/main.html");
+    reset();
+  } else {
+    alert("Inform all data");
+  }
 }
-
-

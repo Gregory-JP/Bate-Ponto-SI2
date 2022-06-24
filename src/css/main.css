@@ -1,3 +1,12 @@
+:root {
+  --yellow: #ff9f1c;
+  --white: #fdfffc;
+  --black: #141115;
+  --text: #828282;
+  --secondary-backgrounds: #f3f3f3;
+  --input-hover: #e8e7e8;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -207,7 +216,7 @@ nav .menubtn {
 }
 
 #cronometro button:hover {
-  background: #c54104;
+  background: #cc7f16;
   color: #f1ecec;
   cursor: pointer;
 }
@@ -219,4 +228,59 @@ nav .menubtn {
   width: 35%;
   margin-left: 65%;
   margin-bottom: -632px;
+}
+
+/* Form Login */
+
+.form--login {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form--login input {
+  width: 200px;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 0.5rem;
+  border-radius: 0.25rem;
+  outline: none;
+  border: none;
+  background-color: var(--secondary-backgrounds);
+  color: var(--black);
+  transition: 400ms;
+  user-select: auto;
+}
+
+.form--login input[value] {
+  cursor: pointer;
+  background: var(--yellow);
+  color: var(--white);
+}
+
+.form--login input[value]:hover {
+  background: #cc7f16;
+}
+
+/* Notification */
+
+.notification {
+  width: 100%;
+  padding: 0.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background: var(--yellow);
+  opacity: 0;
+  transition: 400ms;
+}
+
+.notification {
+  color: var(--black);
+}
+
+.notification--on {
+  opacity: 1;
 }
