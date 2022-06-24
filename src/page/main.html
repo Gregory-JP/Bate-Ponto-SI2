@@ -8,6 +8,7 @@
     <script src="../js/stopwatch.js" defer></script>
     <script src="../js/menu.js" defer></script>
     <script src="../js/permisson.js" defer></script>
+    <script src="../js/login.js"></script>
     <title>Ponto Certo</title>
   </head>
   <body>
@@ -33,16 +34,19 @@
 
       <div class="buttons">
         <ul>
-          <li><a href="login.html">Logout</a></li>
+          <li><a onclick="logout()">Logout</a></li>
           <li><a href="delete.html">Deletar Perfil</a></li>
         </ul>
       </div>
     </nav>
 
     <div class="sideMenu" id="sidenav">
-      <a href="#" class="closeBtn" onclick="closeMenu()">&#10006;</a>
-      <a href="#">Home</a>
-      <a href="#">About</a>
+      <div class="buttons">
+        <ul>
+          <li><a onclick="logout()">Logout</a></li>
+          <li><a href="delete.html">Deletar Perfil</a></li>
+        </ul>
+      </div>
     </div>
 
     <div id="cronometro">

@@ -30,3 +30,8 @@ function login() {
         window.location.assign("/src/page/login.html");
     }
 }
+
+function logout(){
+    sessionStorage.clear()
+    window.location.assign("/src/page/login.html");
+}
