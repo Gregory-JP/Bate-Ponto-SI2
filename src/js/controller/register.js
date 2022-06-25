@@ -13,7 +13,7 @@ function registerUser() {
 
   localStorage.setItem(email, JSON.stringify(user));
 
-  window.location.assign("/src/page/login.html");
+  window.location.assign("/src/view/login.html");
 }
 function deleteUser() {
   const email = document.getElementById("email").value;

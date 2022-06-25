@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/main.css" />
-    <script src="../js/stopwatch.js" defer></script>
-    <script src="../js/menu.js" defer></script>
-    <script src="../js/permisson.js" defer></script>
-    <script src="../js/login.js"></script>
+    <script type="module" src="../js/controller/main.js" defer></script>
+    <script src="../js/middleware/permisson.js" defer></script>
+    <script type="module" src="../js/controller/logout.js" defer></script>
+   
     <title>Ponto Certo</title>
   </head>
   <body>
@@ -30,24 +30,13 @@
         </h1>
       </div>
 
-      <span class="menubtn" onclick="openMenu()">&#9776;</span>
-
       <div class="buttons">
         <ul>
-          <li><a onclick="logout()">Logout</a></li>
+          <li><a id="logout">Logout</a></li>
           <li><a href="delete.html">Deletar Perfil</a></li>
         </ul>
       </div>
     </nav>
-
-    <div class="sideMenu" id="sidenav">
-      <div class="buttons">
-        <ul>
-          <li><a onclick="logout()">Logout</a></li>
-          <li><a href="delete.html">Deletar Perfil</a></li>
-        </ul>
-      </div>
-    </div>
 
     <div id="cronometro">
       <div class="time">
@@ -58,8 +47,8 @@
         <span id="hour">00</span>
       </div>
 
-      <button id="start" onclick="start();">Iniciar</button>
-      <button id="pause" onclick="stop();">Pausar</button>
+      <button id="start" >Iniciar</button>
+      <button id="pause">Pausar</button>
       <form class="form--login">
         <input
           type="text"
@@ -74,7 +63,7 @@
           type="submit"
           value="Registrar"
           class="button"
-          onclick="register()"
+          id="register"
         />
       </form>
     </div>
