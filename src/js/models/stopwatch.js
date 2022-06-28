@@ -17,7 +17,7 @@ class Stopwatch {
     //metodo para formatar o display que irá no localStorage e retornar os dados organizados
     display(){
       //verifico se o dado é menor que 10, caso sim eu coloco um 0 na frente, se não eu uso o proprio valor. Faço isso pros 3 valores do cronometro
-      let s = this._secondVal < 10 ? "0" + this._.toString() : this._secondVal.toString();
+      let s = this._secondVal < 10 ? "0" + this._secondVal.toString() : this._secondVal.toString();
       let m = this._minuteVal < 10 ? "0" + this._minuteVal.toString() : this._minuteVal.toString();
       let h = this._hourVal < 10 ? "0" + this._hourVal.toString() : this._hourVal.toString();
       return h + ":" + m + ":" + s

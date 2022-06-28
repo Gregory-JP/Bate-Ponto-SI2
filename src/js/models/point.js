@@ -12,10 +12,17 @@ class Point {
     }
     //metodo para criar um ponto
     create(user,date,time){
-        this._id = this.#setId();
-        this._user= user;
-        this._date= date;
-        this._time= time;
+        //retiro os 0 e : da string, se tiver numero, é pq o cronometro não estava zeradoS
+        time = time.replace(/[(0)(:)]/g,'');
+        if(time.length > 0){
+            this._id = this.#setId();
+            this._user= user;
+            this._date= date;
+            this._time= time;
+        }
+        else{
+            throw new Error('O tempo não pode estar zerado.') 
+        }
     }
     //metodo para retornar o valor do ponto
     value(){
