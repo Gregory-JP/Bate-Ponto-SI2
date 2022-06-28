@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/login.css" />
-    <script src="../js/controller/deleteUser.js" defer></script>
+    <link rel="stylesheet" href="../css/notification.css"/>
+    <script type="module" src="../js/controller/deleteUser.js" defer></script>
     <script src="../js/middleware/permisson.js" defer></script>
     <title>Ponto Certo - Deletar usuario</title>
   </head>
 
   <body>
+    <div id="notification" class="notification">
+      <p id="message_notification"></p>
+    </div>
     <div class="container-logo">
       <h1 class="logo">
         <a href="index.html">Ponto Certo <span>Sair</span></a>

@@ -1,7 +1,11 @@
+//importar a notificação
+import Notification from '../models/notification.js'
 //coleto o botao que irá acionar o evento
 const deleteButthon = document.getElementById('delete');
 
 deleteButthon.addEventListener('click', () => {
+    //diz que a função não deve ter o comportamento padrao
+    event.preventDefault();
     //coleto os dados do usuario
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
@@ -15,16 +19,17 @@ deleteButthon.addEventListener('click', () => {
       //verifico se os dados estão corretos
       if (email == user.email && password == user.password) {
         //removo o usuario do localStorage e aviso ele, apos redireciono para a tela de login
-        localStorage.removeItem(email);
-        alert("Usuario deletado com sucesso");
-        window.location.assign("/src/view/login.html");
+        //localStorage.removeItem(email);
+        const notification = new Notification("Usuario deletado com sucesso!",true,"/src/view/login.html");
+        notification.activate()
       } else {
         //aviso que os dados do usuario estão errados
-        alert("Email ou senha incorretos");
+        const notification = new Notification("Email ou senha incorretos.")
+        notification.activate()
       }
     } else {
       //aviso que o usuario não existe e recarrego a pagina
-      alert("Usuario não encontrado");
-      window.location.assign("/src/view/delete.html");
+      const notification = new Notification("Usuario não encontrado.",false,"/src/view/delete.html")
+      notification.activate();
     }
   });

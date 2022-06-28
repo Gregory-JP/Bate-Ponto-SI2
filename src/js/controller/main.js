@@ -1,6 +1,7 @@
-// importo o relogio e o ponto
+// importo o relogio e o ponto e a notificação
 import Stopwatch from '../models/stopwatch.js'
 import Point from '../models/point.js';
+import Notification from '../models/notification.js'
 
 //coleto os atributos html referente ao display do cronometro para serem atualizados na tela
 let second = document.getElementById("second");
@@ -41,24 +42,32 @@ register.addEventListener('click', () => {
 
         //verifico se o usuario existe no localStorage
         if (!localStorage.getItem(email)) {
-            alert("Usuario não encontrado");
+            //cria uma notificação informando que o usuario n foi encontrado
+            const notification = new Notification('Usuario não encontrado.')
+            notification.activate();
         //verifico se os dados informados estão corretos
         }else if (email && date && sessionStorage.getItem(email)) {
             //registro o ponto em localStorage
             localStorage.setItem(point._id.toString(), JSON.stringify(point));
-            //aviso o usuario
-            alert("Ponto registrado com sucesso.");
+            
             //reseto o cronometro
             stopwatch.reset();
-            //regarrego a pagina
-            window.location.assign("/src/view/main.html");
+
+            //cria uma notificação e define o redirecionamento
+            const notification = new Notification("Ponto registrado com sucesso!");
+            notification.activate("/src/view/main.html");
+            
         } else {
-            //aviso o usuario para informar todos os dados
-            alert("Informe todos os dados");
+            //cria uma notificação de aviso para informar todos os dados
+            const notification = new Notification("Informe todos os dados.");
+            notification.activate()
         }
     }
     catch(err){
+        //formata a mensagem do erro
+        const msg = err.toString().replace('Error:','');
         //aviso o usuario do erro gerado
-        alert(err)
+        const notification = new Notification(msg);
+        notification.activate()
     }
 })

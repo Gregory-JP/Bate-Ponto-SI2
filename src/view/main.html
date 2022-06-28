@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/notification.css"/>
     <script type="module" src="../js/controller/main.js" defer></script>
     <script src="../js/middleware/permisson.js" defer></script>
     <script type="module" src="../js/controller/logout.js" defer></script>
@@ -17,9 +18,6 @@
     </div>
     <div class="imagem--fundo1">
       <img src="../img/hero2.svg" alt="" />
-    </div>
-    <div class="notification">
-      <p>Ponto registrado com sucesso.</p>
     </div>
     <nav>
       <div class="container-logo">
@@ -37,7 +35,9 @@
         </ul>
       </div>
     </nav>
-
+    <div id="notification" >
+      <p id="message_notification"></p>
+    </div>
     <div id="cronometro">
       <div class="time">
         <span id="second">00</span>
@@ -67,5 +67,6 @@
         />
       </form>
     </div>
+  
   </body>
 </html>

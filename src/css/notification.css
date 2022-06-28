@@ -1,0 +1,22 @@
+:root {
+    --yellow: #ff9f1c;
+    --white: #fdfffc;
+    --black: #141115;
+    --text: #828282;
+    --secondary-backgrounds: #f3f3f3;
+    --input-hover: #e8e7e8;
+  }
+
+.notification {
+    padding: 1rem 0;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    background: var(--yellow);
+    color: var(--black);
+    transition: 400ms;
+    width: 100%;
+    display: none;
+    font-weight: bold
+    }
+    

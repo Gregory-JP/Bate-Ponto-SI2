@@ -1,5 +1,7 @@
-//importa o modulo de permissao
+//importa o modulo de permissao e o de notificação
 import Permission from '../models/permission.js';
+import Notification from '../models//notification.js';
+
 //botão que irá acionar o evento de login da linha 6
 let loginButthon = document.getElementById('login');
 
@@ -25,18 +27,22 @@ loginButthon.addEventListener('click', () => {
                 const permission = new Permission(user.email,true);
                 sessionStorage.setItem(user.email,JSON.stringify(permission.value()))
             }
-            //redireciono ele para a pagina do sistema
-            window.location.assign("/src/view/main.html")
+            //criando notificação
+            const notification = new Notification('Logado com sucesso!',true,"/src/view/main.html")
+            notification.activate()
+            
         }
         else{
             //aviso que os dados estao errados
-            alert('Email ou senha incorretos!')
+            const notification = new Notification('Email ou senha incorretos!',false,"/src/view/login.html")
+            notification.activate()
         }
     }
     else{
         //aviso que o usuario não existe e recarrego a pagina
-        alert('Usuario não encontrado')
-        window.location.assign("/src/view/login.html");
+        const notification = new Notification('Usuario não encontrado!',false,"/src/view/login.html")
+        notification.activate()
+
     }
 })
 
