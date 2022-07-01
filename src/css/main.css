@@ -218,28 +218,6 @@ nav .menubtn {
   background: #cc7f16;
 }
 
-/* Notification */
-
-.notification {
-  width: 100%;
-  padding: 0.5rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-align: center;
-  background: var(--yellow);
-  opacity: 0;
-  transition: 400ms;
-}
-
-.notification {
-  color: var(--black);
-}
-
-.notification--on {
-  opacity: 1;
-}
-
 /* Responsivo */
 
 @media (max-width: 426px) {

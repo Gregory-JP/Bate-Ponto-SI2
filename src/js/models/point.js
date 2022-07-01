@@ -13,8 +13,8 @@ class Point {
     //metodo para criar um ponto
     create(user,date,time){
         //retiro os 0 e : da string, se tiver numero, é pq o cronometro não estava zeradoS
-        time = time.replace(/[(0)(:)]/g,'');
-        if(time.length > 0){
+        let verify = time.replace(/[(0)(:)]/g,'');
+        if(verify.length > 0){
             this._id = this.#setId();
             this._user= user;
             this._date= date;

@@ -19,7 +19,7 @@ deleteButthon.addEventListener('click', () => {
       //verifico se os dados estão corretos
       if (email == user.email && password == user.password) {
         //removo o usuario do localStorage e aviso ele, apos redireciono para a tela de login
-        //localStorage.removeItem(email);
+        localStorage.removeItem(email);
         const notification = new Notification("Usuario deletado com sucesso!",true,"/src/view/login.html");
         notification.activate()
       } else {

@@ -1,5 +1,5 @@
 :root {
-    --yellow: #ff9f1c;
+    --yellow: #ff9f1c ;
     --white: #fdfffc;
     --black: #141115;
     --text: #828282;
@@ -18,5 +18,5 @@
     width: 100%;
     display: none;
     font-weight: bold
-    }
+}
     

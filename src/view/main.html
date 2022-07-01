@@ -5,14 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/notification.css" />
+    <link rel="stylesheet" href="../css/notification.css"/>
     <script type="module" src="../js/controller/main.js" defer></script>
+    <script type="module" src="../js/controller/registers.js" defer></script>
     <script src="../js/middleware/permisson.js" defer></script>
     <script type="module" src="../js/controller/logout.js" defer></script>
 
     <title>Ponto Certo</title>
   </head>
   <body>
+    <div id="notification" class="notification">
+      <p id="message_notification"></p>
+    </div>
     <div class="imagem--fundo">
       <img src="../img/hero.svg" alt="" />
     </div>
@@ -35,9 +39,6 @@
         </ul>
       </div>
     </nav>
-    <div id="notification">
-      <p id="message_notification"></p>
-    </div>
     <div class="cronometro">
       <div class="time">
         <span id="hour">00</span>
@@ -48,6 +49,7 @@
       </div>
 
       <div class="buttons">
+        <button id="teste">Teste</button>
         <button id="start">Iniciar</button>
         <button id="pause">Pausar</button>
       </div>

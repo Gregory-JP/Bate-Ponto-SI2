@@ -1,0 +1,1 @@
+//mostra somente os registros do usuario logado.
