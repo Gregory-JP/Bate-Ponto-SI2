@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/notification.css"/>
+    <link rel="stylesheet" href="../css/notification.css" />
     <script type="module" src="../js/controller/main.js" defer></script>
     <script src="../js/middleware/permisson.js" defer></script>
     <script type="module" src="../js/controller/logout.js" defer></script>
-   
+
     <title>Ponto Certo</title>
   </head>
   <body>
@@ -35,20 +35,22 @@
         </ul>
       </div>
     </nav>
-    <div id="notification" >
+    <div id="notification">
       <p id="message_notification"></p>
     </div>
-    <div id="cronometro">
+    <div class="cronometro">
       <div class="time">
-        <span id="second">00</span>
+        <span id="hour">00</span>
         <span>:</span>
         <span id="minute">00</span>
         <span>:</span>
-        <span id="hour">00</span>
+        <span id="second">00</span>
       </div>
 
-      <button id="start" >Iniciar</button>
-      <button id="pause">Pausar</button>
+      <div class="buttons">
+        <button id="start">Iniciar</button>
+        <button id="pause">Pausar</button>
+      </div>
       <form class="form--login">
         <input
           type="text"
@@ -59,14 +61,8 @@
         />
 
         <input type="date" name="date" id="date" required />
-        <input
-          type="submit"
-          value="Registrar"
-          class="button"
-          id="register"
-        />
+        <input type="submit" value="Registrar" class="button" id="register" />
       </form>
     </div>
-  
   </body>
 </html>
