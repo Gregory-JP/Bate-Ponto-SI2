@@ -15,7 +15,7 @@ class Notification{
             if(this.redirect){
                 window.location.assign(this.redirect)
             }
-        }, 1500);
+        }, 2000);
     }
 }
 
