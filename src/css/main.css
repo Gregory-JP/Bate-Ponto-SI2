@@ -141,65 +141,24 @@ nav .menubtn {
   margin-left: 50px;
 }
 
-/* responsividade do header*/
-@media screen and (max-width: 980px) {
-  .coluna1 h1 {
-    font-size: 40px;
-  }
-  .coluna1 p {
-    font-size: 18px;
-  }
-  .row {
-    margin-top: 80px;
-  }
+.cronometro {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-@media screen and (max-width: 600px) {
-  .coluna1 h1 {
-    font-size: 35px;
-  }
-  .row {
-    flex-direction: column;
-  }
-  .row .coluna1 {
-    padding: 30px;
-  }
+.cronometro .time {
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: 0.25rem;
+  background-color: var(--secondary-backgrounds);
+  color: var(--black);
 }
 
-#cronometro {
-  width: 23%;
-  height: 300px;
-  margin: 100px auto;
-  background: #ff9f1c;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 40px;
-}
-
-#cronometro span {
-  background: none;
-  color: black;
-  padding: 10px 10px 10px;
-  width: 60px;
-  border-radius: 3px;
-  margin-bottom: 0px;
-  display: inline-block;
-}
-
-.time {
-  margin-left: 90px;
-}
-
-#cronometro span {
-  margin-left: -100px;
-  margin-top: 115px;
-}
-
-#cronometro button:first-of-type {
-  margin-top: 150px;
-}
-
-#cronometro button {
+.cronometro button {
   font-size: 22px;
   border: none;
   background-color: #ff9f1c;
@@ -211,11 +170,7 @@ nav .menubtn {
   margin-top: 10px;
 }
 
-#cronometro button:last-child {
-  background-color: #e02006;
-}
-
-#cronometro button:hover {
+.cronometro button:hover {
   background: #cc7f16;
   color: #f1ecec;
   cursor: pointer;
@@ -283,4 +238,18 @@ nav .menubtn {
 
 .notification--on {
   opacity: 1;
+}
+
+/* Responsivo */
+
+@media (max-width: 426px) {
+  .imagem--fundo,
+  .imagem--fundo1 {
+    display: none;
+  }
+
+  nav {
+    margin: 1rem;
+    display: flex;
+  }
 }

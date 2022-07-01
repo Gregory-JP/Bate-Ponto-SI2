@@ -319,3 +319,32 @@ footer {
   text-align: center;
   background: var(--secondary-backgrounds);
 }
+
+/* Responsivo */
+
+@media screen and (max-width: 426px) {
+  p {
+    text-align: center;
+  }
+
+  .hero {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .hero img {
+    display: none;
+  }
+
+  .hero p {
+    width: auto;
+  }
+
+  .card--container {
+    flex-direction: column;
+  }
+
+  .contact--form {
+    max-width: 100%;
+  }
+}
