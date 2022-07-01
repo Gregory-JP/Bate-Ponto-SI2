@@ -5,23 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/notification.css"/>
+    <link rel="stylesheet" href="../css/notification.css" />
     <script type="module" src="../js/controller/main.js" defer></script>
     <script src="../js/middleware/permisson.js" defer></script>
     <script type="module" src="../js/controller/logout.js" defer></script>
+    <script src="../js/models/sideNavigator.js" defer></script>
 
     <title>Ponto Certo</title>
   </head>
   <body>
-    <div id="notification" class="notification">
-      <p id="message_notification"></p>
-    </div>
     <div class="imagem--fundo">
       <img src="../img/hero.svg" alt="" />
     </div>
     <div class="imagem--fundo1">
       <img src="../img/hero2.svg" alt="" />
     </div>
+
     <nav>
       <div class="container-logo">
         <h1 class="logo">
@@ -31,13 +30,27 @@
         </h1>
       </div>
 
+      <span class="menubtn" onclick="openNav()">&#9776;</span>
       <div class="buttons">
         <ul>
           <li><a id="logout">Logout</a></li>
           <li><a href="delete.html">Deletar Perfil</a></li>
+          <li><a href="historic.html">Histórico</a></li>
         </ul>
       </div>
     </nav>
+
+    <!--Menu responsivo-->
+    <div class="sideNav" id="sidenav">
+      <a href="#" class="closeBtn" onclick="closeNav()">&#10006;</a>
+      <a id="logout">Logout</a>
+      <a href="delete.html">Deletar Perfil</a>
+      <li><a href="historic.html">Histórico</a></li>
+    </div>
+
+    <div id="notification">
+      <p id="message_notification"></p>
+    </div>
     <div class="cronometro">
       <div class="time">
         <span id="hour">00</span>
@@ -59,6 +72,7 @@
           placeholder="E-mail"
           required
         />
+
         <input type="date" name="date" id="date" required />
         <input type="submit" value="Registrar" class="button" id="register" />
       </form>

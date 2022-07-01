@@ -1,0 +1,183 @@
+:root {
+  --yellow: #ff9f1c;
+  --white: #fdfffc;
+  --black: #141115;
+  --text: #828282;
+  --secondary-backgrounds: #f3f3f3;
+  --input-hover: #e8e7e8;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #fdfffc);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fdfffc;
+  margin-top: -30px;
+}
+
+.container-logo img {
+  margin-top: -30px;
+  margin-left: -45px;
+  width: 200px;
+}
+
+.logo a {
+  color: #ff9f1c;
+  transition: 400ms all;
+  text-decoration: none;
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 5%;
+}
+
+nav .logo {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  cursor: pointer;
+}
+
+nav ul li {
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: 0.2 ease-in;
+}
+
+nav ul li a {
+  color: #ff9f1c;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  background-color: #e02006;
+  transition: 0.8s;
+}
+
+nav .menubtn {
+  color: #ff9f1c;
+  font-size: 30px;
+  font-weight: bolder;
+  cursor: pointer;
+  display: none;
+}
+
+.sideNav {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #ff9f1c;
+  overflow-x: hidden;
+  transition: 0.3 ease-in;
+  padding-top: 60px;
+  display: none;
+  transition: 0.8s;
+}
+
+.sideNav a {
+  padding: 8px 8px 8px 40px;
+  display: block;
+  font-size: 25px;
+  color: #070707;
+  transition: 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 100%;
+}
+
+.sideNav a:hover {
+  transform: scale(1.2);
+  transition: 0.4s;
+}
+
+.sideNav .closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 30px;
+  margin-left: 50px;
+}
+
+/* menu responsivo*/
+@media screen and (max-width: 700px) {
+  nav .menubtn {
+    display: flex;
+  }
+  nav .buttons {
+    display: none;
+  }
+  .sideNav {
+    display: block !important;
+  }
+}
+
+.imagem--fundo img {
+  width: 30%;
+  margin-bottom: -650px;
+  }
+
+.imagem--fundo1 img {
+  width: 35%;
+  margin-left: 65%;
+  margin-bottom: -632px;
+}
+  
+/* Responsivo */
+
+@media (max-width: 426px) {
+  .imagem--fundo,
+  .imagem--fundo1 {
+    display: none;
+  }
+
+  nav {
+    margin: 1rem;
+    display: flex;
+  }
+}
+
+/* Lista de registros*/
+
+.registros {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.registros button {
+  font-size: 22px;
+  border: none;
+  background-color: #ff9f1c;
+  color: white;
+  border-radius: 5px;
+  width: 140px;
+  height: 50px;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.registros button:hover {
+  background: #cc7f16;
+  color: #f1ecec;
+  cursor: pointer;
+}
