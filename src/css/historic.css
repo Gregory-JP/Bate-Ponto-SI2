@@ -181,3 +181,30 @@ nav .menubtn {
   color: #f1ecec;
   cursor: pointer;
 }
+
+/*Tabela de registros*/
+
+table, th, td {
+  color: black;
+  border: 1px solid black;
+}
+  
+  table {
+  border-collapse: collapse;
+  margin: auto;
+  margin-top: 6%;
+}
+  
+  th, td{
+  padding: 10px;
+  text-align: center;
+  width: 120px;
+}
+  
+  th{
+  font-weight: bold;
+}
+  
+  tr:nth-child(even) {
+  background-color: rgb(206, 206, 206);
+}
