@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/historic.css" />
+    <script src="../js/middleware/permisson.js" defer></script>
+    <script src="../js/models/sideNavigator.js" defer></script>
+    <script type="module" src="../js/controller/logout.js" defer></script>
+    <script type="module" src="../js/controller/registers.js" defer></script>
+
+    <title>Ponto Certo</title>
+  </head>
+  <body>
+    <div class="imagem--fundo">
+      <img src="../img/hero.svg" alt="" />
+    </div>
+    <div class="imagem--fundo1">
+      <img src="../img/hero2.svg" alt="" />
+    </div>
+
+    <nav>
+      <div class="container-logo">
+        <h1 class="logo">
+          <a href="index.html"
+            ><img src="../img/logo.png" alt="Logomarca do Ponto Certo"
+          /></a>
+        </h1>
+      </div>
+
+      <span class="menubtn" onclick="openNav()">&#9776;</span>
+      <div class="buttons">
+        <ul>
+          <li><a id="logout">Sair</a></li>
+          <li><a href="clear.html">Limpar armazenamento</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--Menu responsivo-->
+    <div class="sideNav" id="sidenav">
+      <a href="#" class="closeBtn" onclick="closeNav()">&#10006;</a>
+      <a href="delete.html">Deletar Perfil</a>
+      <li><a href="main.html">Voltar</a></li>
+    </div>
+
+    <div class="registros">
+      <table id="table">
+        <tr>
+          <th>Usuário</th>
+          <th>Data</th>
+          <th>Tempo trabalhado</th>
+        </tr>
+      </table>
+
+    </div>
+  </body>
+</html>

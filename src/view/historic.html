@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/historic.css" />
     <script src="../js/middleware/permisson.js" defer></script>
     <script src="../js/models/sideNavigator.js" defer></script>
-    <script src="../js/controller/registers.js" defer></script>
+    <script type="module" src="../js/controller/myRegisters.js" defer></script>
 
     <title>Ponto Certo</title>
   </head>
@@ -45,20 +45,13 @@
     </div>
 
     <div class="registros">
-      <button id="historic">Ver Histórico</button>
- 
-      <table>
+      <table id="table">
         <tr>
           <th>Usuário</th>
           <th>Data</th>
           <th>Tempo trabalhado</th>
         </tr>
-       
-        <tr>
-          <td id="user"></td>
-          <td id="data"></td>
-          <td id="tempo"></td>
-        </tr>
+      </table>
 
     </div>
   </body>

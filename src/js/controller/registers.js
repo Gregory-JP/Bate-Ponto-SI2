@@ -1,27 +1,14 @@
-//mostra todos os registros de todos os usuarios
+//carrego todos os registros de pontos
 
-//indentifica o botão que irá acionar o evento
-let buttonRegisters = document.getElementById('historic');
+//importo o modelo de registro
+import Register from '../models/register.js'
 
-let lista = []
 
-buttonRegisters.addEventListener ('click', () => {
-    //filtra somente os registros, e ignora os cadastro de user
+//coleto a tabela de registro 
+let table = document.getElementById('table');
 
-    //vai percorrer todos os elementos do localStorage e ignorar aqueles que tem @
-    for(let i=0; i < localStorage.length; i++){
-        if(!localStorage.key(i).includes('@')){
-            //printa no console a resposta
-            lista.push(localStorage.getItem(localStorage.key(i)))
-            console.log(lista[1])
+//carrego todos os registros
+const registers = new Register(table,true);
 
-            let user = lista.slice(1, 3)
-        
-            document.getElementById('user').innerHTML = user;
-            console.log(user)
-
-        }
-        
-    }
-
-})
+//atualizo na tela
+registers.save()

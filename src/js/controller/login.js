@@ -28,9 +28,14 @@ loginButthon.addEventListener('click', () => {
                 sessionStorage.setItem(user.email,JSON.stringify(permission.value()))
             }
             //criando notificação
-            const notification = new Notification('Logado com sucesso!',true,"/src/view/main.html")
-            notification.activate()
-            
+            if(user.isAdmin){
+                const notification = new Notification('Logado com sucesso!',true,"/src/view/dashbord.html")
+                notification.activate()
+            }
+            else{
+                const notification = new Notification('Logado com sucesso!',true,"/src/view/main.html")
+                notification.activate()
+            }
         }
         else{
             //aviso que os dados estao errados

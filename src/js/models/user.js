@@ -10,7 +10,8 @@ class User {
     value(){
         return{
             email: this.email,
-            password: this.passaword
+            password: this.passaword,
+            isAdmin: this.isAdmin
         }
     }
 }

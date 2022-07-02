@@ -29,8 +29,14 @@ register.addEventListener('click', () => {
     event.preventDefault();
     //foi criado uma tratação de erro, pra evitar que o user cadastre um time zerdado
     try{
+        let email;
+        for(let i=0; i < 2; i++){
+            if(sessionStorage.key(i) != 'IsThisFirstTime_Log_From_LiveServer'){
+                email = sessionStorage.key(i)
+            }
+        }
         //coleto os dados do usuario
-        let email = document.getElementById("email").value;
+        //let email = document.getElementById("email").value;
         let date = document.getElementById("date").value;
 
         //formato o display e armazeno na variavel time
@@ -41,7 +47,7 @@ register.addEventListener('click', () => {
         point.create(email,date,time)
 
         //verifico se o usuario existe no localStorage
-        if (!localStorage.getItem(email)) {
+        if (!email) {
             //cria uma notificação informando que o usuario n foi encontrado
             const notification = new Notification('Usuario não encontrado.')
             notification.activate();
@@ -54,12 +60,12 @@ register.addEventListener('click', () => {
             stopwatch.reset();
 
             //cria uma notificação e define o redirecionamento
-            const notification = new Notification("Ponto registrado com sucesso!");
+            const notification = new Notification("Ponto registrado com sucesso!",true);
             notification.activate("/src/view/main.html");
             
         } else {
             //cria uma notificação de aviso para informar todos os dados
-            const notification = new Notification("Informe todos os dados.");
+            const notification = new Notification("Informe a data");
             notification.activate()
         }
     }
