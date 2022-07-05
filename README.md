@@ -33,6 +33,7 @@ O projeto consiste em um sistema de bate ponto online. Onde o usuário terá um 
   </p>
 
 4. Novamente, **você precisa da extensão Live Server.**
+5. Caso você desejar acessar como administrador, na hora de fazer login use o email: 'admin@admin.com' e senha: '@Admin' (sem as '')
 
 ---
 
@@ -48,4 +49,3 @@ O projeto consiste em um sistema de bate ponto online. Onde o usuário terá um 
 - [x] Local Storage 
 
 ---
-
